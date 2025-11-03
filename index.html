@@ -1,0 +1,39 @@
+<!--Assignment 2 - Quantified Self ==> Hozier and I 
+
+    Author: Caoimhe O'Brien
+    Date: 30/10/2025
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hozier and I</title>
+        <link href="stylesheet.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <h1>My Top tracks with and without Hozier</h1>
+
+        <div class="PictureContainer">
+            <div class="picture" id="picture">
+                <img src="assets/withHozier.png" alt ="Albums covers including Hozier's in the shape of a profile icon" class ="front">
+                <img src="assets/withoutHozier.png" alt ="Albums covers excluding Hozier's in the shape of a profile icon" class ="back">
+            </div>
+        </div>
+
+        <p>Click the button below to see how often I listen to Hozier.</p>
+
+        <button onclick="toggleHozier()">Hozier?</button>
+
+
+        <script>
+            const picture = document.getElementById("picture");
+
+            function toggleHozier(){
+                picture.classList.toggle('flip');
+            }
+        </script>
+    </body>
+</html>

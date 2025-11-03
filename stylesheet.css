@@ -1,0 +1,107 @@
+/*Assignment 2 - Quantified Self ==> Hozier and I 
+
+    Author: Caoimhe O'Brien
+    Date: 30/10/2025
+    Styles: 
+        -Index
+
+*/
+
+:root {
+    --ftsize: 18px;
+    --main-bg: linear-gradient(135deg, #d8e8ff, #9ce597);
+    --btn-bg: #5faa63;
+    --btn-hover: #4a8f52;
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    --radius: 12px;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    max-height: 100%;
+    background: var(--main-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #16324f;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.PicContainer {
+    perspective: 1000px;
+    width: 470px;
+    max-width: 90%;
+}
+
+.picture {
+    width: 470px;
+    height: 680px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+
+.picture.flip {
+    transform: rotateY(180deg);
+}
+
+.picture img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: var(--radius);
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.picture .back {
+    transform: rotateY(180deg);
+}
+
+
+.picture .flipped {
+    transform: rotateY(180deg);
+}
+
+
+/* Button styles */
+button {
+    font-size: 20px;
+    padding: 10px 24px;
+    background-color: var(--btn-bg);
+    color: #f4f9f5;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--btn-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow);
+}
